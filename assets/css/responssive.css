@@ -1,0 +1,311 @@
+@media screen and (max-width: 1433px) {
+    #last_ctn #pied_pc::after,#single_web #pied_pc::after,#single_graphisme #pied_pc::after{
+        top: 65%;
+        background-size: 100%;
+        margin-left: -33px;
+        width: 88%; 
+    }
+}
+@media screen and (max-width: 1200px) {
+    #nav_footer>ul{
+        flex-direction: column;
+    }
+    #nav_footer>ul li{
+        padding: 5px;
+        text-align: center;
+    }
+}
+@media screen and (max-width: 1150px) {
+   .grid4{
+     grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media screen and (max-width: 1080px) {
+    /* #filtre > label img {
+        display: none;
+    } */
+}
+/* TABLETTE */
+    
+@media screen and (max-width:980px){
+    .grid3{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .avweb_responsive_colonne{
+        flex-direction: column;
+    }
+    .avweb_responsive_colonne_reverse{
+        flex-direction: column-reverse;
+    }
+    .avweb_w1_tablette{
+        width: 100%;
+    }
+    /* header */
+        .tablette{
+            display: block;
+        }
+        .desktop{
+            display: none;
+        }
+        #burger+label {/*Regle de style du label */        
+            display: block;
+            width: 43px;
+            height: 37px;
+            position: fixed;
+            top: 35px;
+            right: 70px;
+            z-index: 100002;
+        }
+        #burger+label:before {
+            content: '';
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            border-top: solid 3px var(--color1); /*barre du haut */
+            border-bottom: solid 3px var(--color1);/*barre du millieu*/
+            transition: all 0.3s;
+            border-radius: 10px;
+        }
+        #burger+label:after {
+            content: '';
+            width: 100%;
+            position: absolute;
+            top: 18px;
+            left: 0;
+            border-top: solid 3px var(--color1);/*barre du bas*/
+            transition: all 0.3s;
+        }
+        #burger:checked+label:before {  /*la barre du haut diparait et la barre du milieu fait une rotate de 45°*/
+            border-top-color: transparent;
+            height: 0;
+            top: 25px;
+            transform: rotate(45deg);
+            border-radius: 50%;/*la barre du millieu devien pointu sur les bords*/
+        }
+        #burger:checked+label:after {/*la barre du bas fait une rotate de 45° et devient pointue sur les bords*/
+            transform: rotate(-45deg);
+            border-radius: 50%;
+        }
+         menu { /*regle de style du ul qui se deroule */
+            position: fixed;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            background-color: var(--color3);
+            display: flex ; 
+            flex-direction: column;
+            transition: all .3s;
+            transform: translateX(-120%);
+            overflow: scroll;
+        }
+        #burger:checked+label + menu {
+        /* regle de style quand le burger est coché */
+        transform: translateX(0);
+       
+        }
+        header nav li { /*pour aerer le ul */
+            flex: 4;
+            display: inherit;
+            align-items: center;
+            justify-content: center;
+        }
+        .menu {
+            padding-top: 60px;
+        } 
+        .menu > menu > li a,.menu > ul > li label{
+            /* background: var(--color2); */
+            border-radius: 15px;
+            border-top: 1px solid var(--color2);
+            border-bottom: 1px solid var(--color2);
+            color: var(--color2);
+            display: flex;
+            justify-content: center;
+            padding: 15px;
+            text-decoration: none;
+            width: 300px;
+            margin: 0 auto;
+        } 
+        
+        .menu > ul li input:checked+label ~.sub-menu {  
+            max-height: 300px; 
+        }
+        .menu > ul .sub-menu li a{
+            font-size: 0.9em;
+            width: 100%;
+        }
+       
+        .menu > menu > li:first-child >a{
+            background: none;
+            border: none;
+        }
+         #responsive-main-menu li:first-child img{
+            min-width: 200px;
+            max-width: 70%;
+        } 
+        #responsive-main-menu .menu-item-has-children{
+            display: flex;
+            flex-direction: column;
+        }
+        .sub-menu{
+            display: flex;
+            flex-direction: column;
+            height: max-content;
+            opacity: 0;
+            text-align: center;
+            z-index: -1;
+            padding-bottom: 10px; 
+            background-image: linear-gradient(271deg,transparent, var(--color2), transparent);
+            list-style: none;
+            max-height: 0;
+            overflow: hidden;
+            transition: .5s;
+            width: 60%;   
+            margin: 0 auto;
+        }
+        #menu_deroulant a{
+            width: 100%;   
+        }
+        #menu_deroulant li{
+            padding: 10px 0;   
+        }
+        header li a:after {    
+            content: "";
+            display: none;
+        }
+        /* class ajouté en JS pour ouvrir le sous menu*/
+        .open_menu{
+            opacity: 1;
+            z-index: 1;
+            top: 100%;
+            display: flex;
+            flex-direction: column;
+            padding: 15px;
+            text-decoration: none;
+            width: 60%;
+            margin: 0 auto;
+            max-height: 300px;
+            background-image: linear-gradient(271deg,transparent, var(--color2), transparent);
+            width: 60%;
+        }   
+        #ctn_fleche{
+            display: none;
+        }
+        #contact article{
+            padding: 0  0 var(--pad-h);
+        }
+        #contact form{
+            border: none;
+        }
+        #ctn_top_nav{
+            transform:translateY(28px);
+        }
+        #card_tarif_adhesion{
+            margin: 100px auto 0;
+        }
+
+    /* fin header */
+    .pad_first_element{
+        padding: 300px 5% var(--pad-h); 
+    }
+    #scrall_baniere a:hover img{
+        transform: initial;
+    }
+ 
+    /* footer */
+        #nav_footer{
+            display: none;
+        }
+    /* footer */
+} 
+/* FIN TABLETTE */ 
+
+@media screen and (max-width:850px){
+    .grid4{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media screen and (max-width:781px){
+ 
+}
+/* MOBILE */
+    @media screen and (max-width:767px){
+        .avweb_responsive_mobile_colonne{
+            flex-direction: column;
+        }
+        .avweb_responsive_mobile_colonne_reverse{
+            flex-direction: column-reverse;
+        }
+        .avweb_not_display_mobile{
+            display: none;
+        }
+        .grid3,.grid2,.grid3,.grid4{
+            grid-template-columns: repeat(1, 1fr);
+        }
+        .mobile{
+            display: block;
+        }
+		#burger+label {
+            right: 36px;
+        }
+        .avweb_w1_mobile{
+            width: 100% !important;
+        }
+        .kpi>div:first-child{
+            margin-left: 50px;
+        }
+        .item_comteur{
+            margin-bottom: 60px;
+            flex-direction: row ;
+            justify-content: space-evenly !important;            
+        }
+        #non_prenom div:last-child, #tel_mail div:last-child {
+            margin-left: 0 !important;
+        }
+        
+   
+
+    /* footer */
+        footer>div{
+            flex-direction: column-reverse;
+        }
+        #menu_footer>a{
+            margin: 30px 0;
+        }
+    /*fin footer  */
+    }
+/* FIN MOBILE */    
+@media screen and (max-width:880px){ 
+    
+}
+@media screen and (max-width: 667px){
+    #slogan{
+        font-size: 1.3rem;
+    }
+    #content_baniere h1{
+        font-size: 3rem;
+    }
+}
+@media screen and (max-width: 500px){
+
+}
+@media screen and (max-width: 400px) {
+    .kpi>div:first-child{
+        margin-left: 0;
+    }
+    .item_comteur{
+        margin-bottom: 10px;
+        flex-direction: column ;       
+    }
+}
+@media screen and (max-width:342px) {
+    #content_baniere h1{
+        font-size: 2.5rem;
+    }
+  
+}
+@media screen and (max-height: 300px) {
+   
+}

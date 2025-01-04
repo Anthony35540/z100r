@@ -1,0 +1,123 @@
+  /* formulaire de contacte */
+form{
+padding: 0 3%;
+width: 50%;
+border-right: solid 1px var(--color1); 
+}
+form h2{
+    padding: 15px 0;
+}
+form input{
+    padding: 8px 0 8px 5%; 
+    color: var(--color1);
+    font-size: 1.1rem;
+}
+form input:not([type="submit"]),textarea{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: solid 1px var(--color1);
+    background: transparent;
+    transition: border-color 0.3s, box-shadow 0.3s; /* Transition pour un effet fluide */
+}
+input:focus,select:focus {
+    box-shadow: 0 1px 0 0 var(--color2); /* Effet sur le bas uniquement */
+}
+input:focus,select:focus {
+    box-shadow: 0 1px 0 0 var(--color2); /* Effet sur le bas uniquement */
+}
+textarea:focus {
+    box-shadow: 0 1.2px 0 0 var(--color2); /* Effet sur le bas uniquement */
+}
+form div{
+    padding: 20px 0;
+}
+#contact_form p{
+    padding: 15px 0;
+}
+#ctn_choix{
+    padding: 15px 0 20px
+}
+#ctn_choix input{
+    margin-left: 10px;
+}
+/* Styles pour un input radio non coché */
+input[type="radio"] {
+    width: 20px; 
+    height: 20px; 
+}
+#non_prenom,#tel_mail,#ctn_choix div {
+    padding: 0;
+}
+#non_prenom input,#tel_mail input{
+    width: 100%;
+}
+#non_prenom div:first-child,#tel_mail div:first-child{
+    margin-right: 15px;
+}
+#non_prenom div:last-child,#tel_mail div:last-child{
+     margin-left: 15px;
+}
+textarea{
+    min-width: 100%;
+    max-width: 100%;
+    padding: 2%;
+    color: var(--color1);
+    margin-bottom: 20px;
+    font-family: inherit;
+    font-size: inherit;
+}
+::placeholder,form label,#input_captcha{
+    font-family: inherit;
+    font-size: inherit;
+    color: var(--color1);
+}
+::placeholder{
+    font-size: 1.1rem;
+    padding-left: 2%;
+}
+.label {
+    display:block;
+    position: absolute;
+    left:30px;
+    bottom:25px;
+    transition: all .3s;
+    opacity: 0;
+    cursor: initial;
+    z-index: -1; 
+}
+form input:not(:placeholder-shown)+.label{
+    display: block;
+    position: absolute;
+    left: 30px;
+    bottom: 60px;
+    z-index: 1;
+    color: var(--color2);
+    opacity: 1;
+}
+.erreur_form{
+    color: rgb(255, 0, 0) !important;
+}
+.erreur_form,.validation{
+    font-size: 2rem;
+}
+.color_champ{
+    border:solid 2px rgb(255, 0, 0) !important; 
+    
+}
+.validation{
+    color: rgb(4, 97, 4) !important;
+}
+#rbpg{
+    display: block;
+    width: 100px;
+    height: 20px;
+    margin-right:20px;
+}
+iframe[title="reCAPTCHA"]{
+    transform: translateY(-50px);
+}
+#validation_formulaire p{
+    padding: 10px 0;
+}
+/* fin formulaire de contacte */

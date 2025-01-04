@@ -1,0 +1,179 @@
+<!-- <div role="button">
+    <a class="btn transition" href="#"> bouton</a>
+</div> -->
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Z100R</title>
+    <!-- css -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/framework.css">
+    <link rel="stylesheet" href="assets/css/responssive.css">
+    <link rel="stylesheet" href="assets/css/annimation.css">
+    <link rel="stylesheet" href="assets/css/compteur.css">
+    <link rel="stylesheet" href="assets/css/form_contact.css">
+    <!-- js -->
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/compteur.js"></script>
+</head>
+<body>
+    <header class="fixed w1 flex between items_center avweb_responsive_colonne">
+        <a id="lien_logo" href="index.html">
+            <div id="ctn_logo" class="flex content_center items_center">
+                <img id="logo" class=" transition radius15" src="assets/img/logo zero sans reseau couleur transparent.png" alt="">
+            </div>
+        </a>
+        <div id="ctn_nav_btn">
+            <div class="flex column">
+                <div id="ctn_top_nav" class="flex avweb_responsive_colonne">
+                    <ul  class=" flex">
+                        <li class="">
+                          
+                            <a href="tel:06 00 00 00 00" class=" flex items_center"> <img class="icon" src="assets/img/tel.png" alt=""><span class="bloc desktop">06 00 00 00 00</span></a >
+                        </li>
+                        <li class="flex items_center">
+                            
+                            <a href="mailto:zero100rezo@gmal.com" target="_blank" class="flex items_center"><img class="icon" src="assets/img/mail.png" alt=""> <span class="bloc desktop ">zero100rezo@gmal.com</span></a>
+                        </li>
+                    </ul>
+
+                    <!-- le btn -->
+                    <div role="button" class="flex items_center btn_header">
+                        <a class="btn hidden flex items_center" href="adhesion.html"> Adhérer à Z100R <span class="hover_btn hidden transition"> > </span></a>
+                    </div>
+                </div>
+
+                <nav> 
+                    <div id="first_menu" class="desktop">
+                        <!-- menu desktop mode -->
+                        <ul id="primary-menu" class="flex menu_desktop ">
+                            <li class="relative"><a href="propos.html" class="hover_link bold"> A propos</a></li>
+                            <li class="relative"><a href="contact.html" class="hover_link bold">Contact</a></li>
+                            <li class="relative"><a href="membre.html" class="hover_link bold"> Nos membres</a></li>  
+                            <li class="relative"><a href="adhesion.html" class="hover_link bold">Adhesion</a></li>  
+                            
+                        </ul>
+                    </div>
+
+
+                        <!-- fin menu desktop mode -->
+
+                        <!--  MENU RESPONSSIVE -->
+                        <div class="menu tablette">
+                            <input id="burger" type="checkbox"> 
+                            <label for="burger"></label>
+                            <menu id="responsive-main-menu ">
+                                <li>
+                                    <a id="lien_logo" href="index.html">
+                                        <div id="ctn_logo_burger" class="flex content_center items_center">
+                                            <img id="logo_burger" class=" rotation " src="assets/img/logo zero sans reseau couleur transparent.png" alt="">
+                                        </div>
+                                    </a>
+                                </li>
+                                <li><a class="bold" href="propos.html">A propos</a></li>
+                                <li><a class="bold" href="contact.html">Contact</a></li>
+                                <li><a class="bold" href="membre.html"> Nos membres</a></li> 
+                                <li><a class="bold" href="adhesion.html">Adhesion</a></li> 
+                               
+                            </menu>
+                        </div> 
+                </nav>
+            </div>
+        </div>
+    </header>
+
+ 
+
+    <section id="contact" class="pad_first_element">
+        <h1 class="color2 center ">Contactez nous </h1>
+        <div class="flex padh avweb_responsive_colonne_reverse ">
+            <form action="#contact_form" method="POST" class="out margin_center avweb_w1_tablette  .{
+                flex-direction: column;
+            }" name="form_contact">
+                <h3 class="algerian center">Ecrivez-nous</h3>
+                <div id="non_prenom" class="flex avweb_responsive_mobile_colonne">
+                    <!-- nom -->
+                    <div class="w2 relative avweb_w1_mobile">
+                        <input class="  " type="text" name="nom_contact" placeholder="Nom" value="">
+                        <label class="absolute label" for="Nom">Nom</label>
+                    </div>
+                    <!-- prenom -->
+                    <div class="w2 relative avweb_w1_mobile">
+                        <input class="" type="text" name="prenom_contact" placeholder="Prénom "value="">
+                        <label class="absolute label" for="email">Prénom</label>
+                    </div>
+                </div>
+                <div id="tel_mail" class="flex avweb_responsive_mobile_colonne">
+                    <!-- tel -->
+                    <div class="w2 relative avweb_w1_mobile">
+                        <input class=" " type="tel" name="tel_contact" placeholder="Tel"value="">
+                        <label class="absolute label" for="Nom">Tel</label>
+                    </div>
+                    <!-- email -->
+                    <div class="w2 relative avweb_w1_mobile">
+                        <input class=" " type="email" name="email_contact" placeholder="Email "value="">
+                        <label class="absolute label" for="email">Email</label>
+                    </div>
+                </div>
+                <!-- objet  -->
+                <div class="relative ">
+                    <input class="w1 " type="text" name="objet_contact" placeholder="Objet" value="">
+                    <label class="absolute label" for="email">Objet</label>
+                </div>
+                <!-- le message -->
+                <textarea class="" name="message_contact" id="" cols="30" rows="10" placeholder="Votre message"></textarea>
+                <!-- rgpd -->
+                  <div class="flex w1 items_center <?php if (isset($color_champ["rgpd_message_contact"])) { echo $color_champ["rgpd_message_contact"];} ?>">
+                    <input type="checkbox" id="rbpg" class=" pointer check_rgpd" name="rgpd_message_contact"> 
+                    <label id="label_rgpd" for="rbpg" class="bloc pointer italic">En cochant cette case, vous consentez à la collecte et au traitement de vos données personnelles conformément à notre <a class="color2" href="<?php echo home_url("politique-de-confidentialite") ?>" target="_blank">Politique de confidentialité</a></label>
+                </div>
+            
+                  <!-- captcha -->
+                <div class="g-recaptcha <?php if (isset($color_champCaptcha)) {echo $color_champCaptcha;}?>" data-sitekey="6LcK0BYqAAAAACIhBUDbhAiP0-22cZEheshltjeb"></div>
+            
+                <input type="submit" name="submit_contact" value="Envoyer " class="margin_center bloc out btn algerian">
+            </form>
+
+            <article class="w2 flex items_center column between avweb_w1_tablette ">
+                <ul class="">
+                    <li class="flex items_center">
+                        <img class="icon" src="assets/img/marquer.png" alt="">
+                        <span class="bloc">Cesson Sévigné</span>
+                    </li>
+                    <li class="flex items_center">
+                        <img class="icon" src="assets/img/tel.png" alt="">
+                        <a href="tel:06 00 00 00 00" class="bloc">06 00 00 00 00</a >
+                    </li>
+                    <li class="flex items_center">
+                        <img class="icon" src="assets/img/mail.png" alt="">
+                        <a href="mailto:zero100rezo@gmal.com" target="_blank" class="bloc">zero100rezo@gmal.com</a>
+                    </li>
+                </ul>
+
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d42612.999190646886!2d-1.6346970678995763!3d48.12349758767189!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x480ed931c3d68b35%3A0x55b2e618932c9040!2s35510%20Cesson-S%C3%A9vign%C3%A9!5e0!3m2!1sfr!2sfr!4v1735890951400!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </article>
+        </div>
+
+
+
+        
+
+    </section>
+
+
+
+
+
+
+
+    
+    <footer>
+        <p class="center">©Zéro100Rézo | Tous droits réservés | 2025 | confidentialité et cookies </p>
+    </footer>
+
+    <script src="assets/js/menu_responssive.js"></script>
+</body>
+</html>

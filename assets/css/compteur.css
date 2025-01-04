@@ -1,0 +1,21 @@
+.item_comteur{
+    width: 30%;
+}
+.item_comteur>div{
+    background-color: #a80000;
+    width: 150px;
+    height: 150px;
+}
+.counter {
+    font-size: 3rem; 
+    font-weight: bold;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    display: inline-block;
+}
+.kpi p {
+    color: #a80000;
+    padding: 10px;
+    font-size: 1.2rem;
+}
